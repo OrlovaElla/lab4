@@ -12,7 +12,7 @@
     <?php
     $id = 0;
     $name = '';
-    $cost = 0;
+    $price = 0;
     $img = '';
 
     $xml = simplexml_load_file("data.xml") or die("Error: Cannot update object");
@@ -25,7 +25,7 @@
             if ($item['id'] == $id) {
                 $img = $item->img;
                 $name = $item->name;
-                $cost = $item->cost;
+                $price = $item->price;
                 $node = $item;
                 break;
             }
@@ -36,7 +36,7 @@
             if ($item['id'] == $id) {
                 $item->img = $_POST['img'];
                 $item->name = $_POST['name'];
-                $item->cost = $_POST['cost'];
+                $item->price = $_POST['price'];
                 break;
             }
         }
@@ -46,7 +46,7 @@
 
      <form method="POST" action="update.php?id=<?= $id ?>">
         Название продукта: <input type="text" name="name" value="<?= $name ?>"/><br />
-        Стоимость продукта: <input type="number" name="cost" value="<?= $cost ?>" /><br />
+        Стоимость продукта: <input type="number" name="price" value="<?= $price ?>" /><br />
         Ссылка на изображение: <input type="text" name="img" value="<?= $img ?>" /><br />
         <input type="hidden" value="<?= $id ?>" name="id"/>
         <input type="submit" value="Сохранить" />
