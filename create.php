@@ -14,12 +14,12 @@
 		if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 			$img = $_POST['img'];
 			$name = $_POST['name'];
-			$cost = $_POST['cost'];
+			$price = $_POST['price'];
 			$xml = simplexml_load_file("data.xml") or die("Error: Cannot create object");
 			$task = $xml->addChild('item', '');
 			$task->addChild('img', $img);
 			$task->addChild('name', $name);
-			$task->addChild('cost', $cost);
+			$task->addChild('price', $price);
 			$task->addAttribute('id', $xml->count());
 	        $xml->saveXML('data.xml');
 		} 
@@ -27,7 +27,7 @@
 
 	<form method="POST" action="create.php">
         Название: <input type="text" name="name" /><br />
-        Стоимость: <input type="number" name="cost" /><br />
+        Стоимость: <input type="number" name="price" /><br />
         Ссылка на изображение: <input type="text" name="img" /><br />
         <input type="submit" value="Сохранить" />
     </form>
