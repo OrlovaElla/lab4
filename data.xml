@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+<item id="1"><img>plant1.png</img><name>Kaktus Plants</name><cost>95.000</cost></item>
+<item id="2"><img>plant2.png</img><name>Landak Plants</name><cost>88.000</cost></item>
+<item id="3"><img>plant3.png</img><name>Kecubung Plants</name><cost>125.000</cost></item>
+<item id="4"><img>plant4.png</img><name>Kecubung Plants</name><cost>85.000</cost></item>
+<item id="5"><img>plant5.png</img><name>Kecubung Plants</name><cost>105.000</cost></item>
+</items>
